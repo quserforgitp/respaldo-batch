@@ -14,8 +14,8 @@ REM COMPARAR CONTENIDOS
 CD "%_rutaOrigen%"
 SETLOCAL EnableDelayedExpansion
 FOR /D /R %%a IN (*) DO (
-	echo %%a
-	pause
+	SET "_siguienteDirectorio=%%a"
+	DIR /B /A-D > NUL 2>&1
 )
 
 REM COPIAR CONTENIDOS NO PRESENTES EN DESTINO
